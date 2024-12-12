@@ -57,7 +57,7 @@ jobs:
       - name: run-python-script
         run: |
           ls
-          python /helmcharts/script.py ${{ github.run_id }}
+          python ./helmcharts/script.py ${{ github.run_id }}
 
       # Step 4: Build the Docker image
       - name: Build Docker image
