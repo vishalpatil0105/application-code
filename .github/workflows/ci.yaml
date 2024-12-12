@@ -39,7 +39,7 @@ jobs:
       - name: Checkout repository-helmcharts
         uses: actions/checkout@v4
         with:
-          repository: helm-charts
+          repository: vishalpatil0105/helm-charts
           path: helmcharts
 
       - name: Checkout repository
