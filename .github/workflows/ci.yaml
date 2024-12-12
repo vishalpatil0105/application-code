@@ -36,6 +36,10 @@ jobs:
     runs-on: ubuntu-latest
     # needs: test-cases
     steps:
+      - name: git-config
+        run: |
+          git config --global user.email "patilvishal0622@gmail.com"
+          git config --global user.name "vishalpatil0105"
       - name: Checkout repository
         uses: actions/checkout@v4
 
