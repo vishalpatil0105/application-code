@@ -12,7 +12,7 @@ class TestPagesBlueprint(unittest.TestCase):
         # Test the home route
         response = self.client.get("/")
         self.assertEqual(response.status_code, 200)
-        # self.assertIn(b"<h1>Home</h1>", response.data)
+        self.assertIn(b"<h1>Home</h1>", response.data)
 
     def test_about_route(self):
         # Test the about route
