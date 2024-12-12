@@ -1,0 +1,12 @@
+name: ci-workflow-demo
+on: [push]
+jobs:
+  install:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: chekcout repo code
+        uses: actions/checkout@v4
+
+      - name: Print
+        run: echo "Testing..."
+        
