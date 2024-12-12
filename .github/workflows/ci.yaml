@@ -51,7 +51,7 @@ jobs:
       #     docker push ${{ secrets.DOCKER_USERNAME }}/my-flask-app:latest
       
       - name: Store current run ID
-        run: echo "RUN_ID=${{ github.run_id }}" >> $GITHUB_ENV
+        run: echo "RUN_ID=${{ github.run_id }}" >> $GITHUB_OUTPUT
 
   update-the-image-tag:
     runs-on: ubuntu-latest
@@ -68,4 +68,4 @@ jobs:
       
       - name: Echo the run ID from the previous job
         run: |
-          echo "The current run ID is $RUN_ID"
+          echo  echo $${{needs.build-and-push.outputs.output2}}
