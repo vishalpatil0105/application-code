@@ -72,4 +72,4 @@ jobs:
       
       - name: Echo the run ID from the previous job
         run: |
-          echo  echo $${{needs.build-and-push.outputs.tag}}
+          echo  echo ${{needs.build-and-push.outputs.tag}}
