@@ -14,11 +14,11 @@ jobs:
   test-cases:
     runs-on: ubuntu-latest
     steps:
-      # Step 1: Checkout the repository
+  
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Step 2: Set up Python for running tests
+      
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -64,12 +64,10 @@ jobs:
           ls
           python ./helmcharts/script.py ${{ github.run_id }}
 
-  
       - name: Build Docker image
         run: |
           docker build -t ${{ secrets.DOCKER_USERNAME }}/my-flask-app:${{ github.run_id }} .
 
-      # Step 5: Push the Docker image to Docker Hub
       - name: Push Docker image to Docker Hub
         run: |
           docker push ${{ secrets.DOCKER_USERNAME }}/my-flask-app:${{ github.run_id }}
