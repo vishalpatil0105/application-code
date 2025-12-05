@@ -14,3 +14,4 @@ COPY ./board /app/board/
 EXPOSE 8000
 
 ENTRYPOINT ["python", "-m", "flask", "--app", "board", "run", "--port", "8000"]
+ 
